@@ -5,6 +5,9 @@ plugins {
 android {
     namespace = "com.example.hackathon_userapp"
     compileSdk = 35
+    buildFeatures {
+        viewBinding = true
+    }
 
     defaultConfig {
         applicationId = "com.example.hackathon_userapp"
