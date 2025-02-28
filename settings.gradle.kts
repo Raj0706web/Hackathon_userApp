@@ -1,3 +1,4 @@
+import org.gradle.api.artifacts.repositories.MavenArtifactRepository
 pluginManagement {
     repositories {
         google {
@@ -16,6 +17,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            setUrl("https://jitpack.io")
+        }
     }
 }
 
