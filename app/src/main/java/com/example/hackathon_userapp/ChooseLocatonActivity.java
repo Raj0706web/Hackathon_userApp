@@ -20,8 +20,8 @@ public class ChooseLocatonActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(binding.getRoot());
         binding = ActivityChooseLocatonBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         ArrayList<String> locationList = new ArrayList<>(Arrays.asList("Patna", "Kolkata", "Odisha", "Meerut"));
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, locationList);
         AutoCompleteTextView autoCompleteTextView = binding.listOflocation;

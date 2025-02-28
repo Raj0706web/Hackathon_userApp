@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hackathon_userApp"
         tools:targetApi="31">
+        <activity android:name=".loginActivity"
+            android:exported="false" />
         <activity android:name=".SignActivity"
             android:exported="false" />
         <activity
