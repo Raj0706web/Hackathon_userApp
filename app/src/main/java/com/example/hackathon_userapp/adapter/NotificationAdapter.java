@@ -1,11 +1,11 @@
-package com.example.wavesoffood.adaptar;
+package com.example.hackathon_userapp.adapter;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.wavesoffood.databinding.NotificationItemBinding;
+import com.example.hackathon_userapp.databinding.NotificationItemBinding;
 
 import java.util.ArrayList;
 
