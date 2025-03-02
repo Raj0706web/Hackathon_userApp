@@ -20,6 +20,7 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.interfaces.ItemClickListener;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.hackathon_userapp.MenuBottomSheetFragment;
 import com.example.hackathon_userapp.R;
 import com.example.hackathon_userapp.adapter.PopularAdapter;
 import com.example.hackathon_userapp.databinding.FragmentHomeBinding;
@@ -41,6 +42,14 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding.viewAllMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MenuBottomSheetFragment bottomSheetDialog = new MenuBottomSheetFragment();
+                bottomSheetDialog.show(getParentFragmentManager(), "Test");
+            }
+        });
+
         return binding.getRoot();
     }
 
