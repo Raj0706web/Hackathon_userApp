@@ -31,6 +31,14 @@ public class MenuBottomSheetFragment extends BottomSheetDialogFragment {
                              @Nullable Bundle savedInstanceState) {
         binding = FragmentMenuBottomSheetBinding.inflate(inflater, container, false);
 
+        binding.butonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dismiss();
+            }
+        });
+
+
         List<String> menuFoodName = Arrays.asList("Burger", "sandwich", "momo", "dosa", "sandwich", "momo");
         List<String> menuItemPtice = Arrays.asList("50/-", "100/-", "50/-", "60", "70/-", "120/-");
         List<Integer> menuImage = Arrays.asList(
