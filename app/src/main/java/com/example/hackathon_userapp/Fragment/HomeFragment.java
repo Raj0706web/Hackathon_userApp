@@ -1,11 +1,13 @@
 package com.example.hackathon_userapp.Fragment;
 
+import android.graphics.Rect;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -68,7 +70,9 @@ public class HomeFragment extends Fragment {
         List<String> Price = new ArrayList<>(Arrays.asList("51/-","109/-","49/-","69/-"));
         List<Integer> images = new ArrayList<>(Arrays.asList(R.drawable.menu1,R.drawable.menu2,R.drawable.menu3,R.drawable.menu2));
         PopularAdapter adapter = new PopularAdapter(foodName,images,Price);
-        binding.PopularRecyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(requireContext());
+        layoutManager.setItemPrefetchEnabled(false);
+        binding.PopularRecyclerView.setLayoutManager(layoutManager);
         binding.PopularRecyclerView.setAdapter(adapter);
 
 
