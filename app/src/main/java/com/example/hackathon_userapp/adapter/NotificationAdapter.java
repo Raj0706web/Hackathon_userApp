@@ -45,7 +45,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
         }
 
         public void bind(int position) {
-            binding.notificationTextView.setText(notification.get(position));
+            binding.notificatonTextView.setText(notification.get(position));
             binding.notificationImageView.setImageResource(notificationImage.get(position));
         }
     }
